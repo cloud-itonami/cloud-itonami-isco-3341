@@ -75,7 +75,7 @@
                                 being refused outright — it may be a
                                 legitimate one-off purchase).
     8. low confidence (< `confidence-floor`)."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [officesupervision.store :as store]))
 
 (def confidence-floor 0.6)
@@ -119,7 +119,7 @@
   finalizing action on a disciplinary/termination/performance-review
   matter, never merely mentioning the topic."
   [proposal]
-  (let [text (str/lower-case (str (:rationale proposal)))]
+  (let [text (str/lower (str (:rationale proposal)))]
     (boolean (some #(str/includes? text %) finalization-phrases))))
 
 (defn- hard-violations [{:keys [request proposal]} office-record basis-record]
