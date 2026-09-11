@@ -16,7 +16,7 @@ instead of renting a closed workforce-management SaaS.
 itonami actor pattern (ADR-2607011000): `:intake -> :advise -> :govern ->
 :decide -+-> :commit (:ok?) +-> :request-approval (:escalate?,
 human-in-the-loop interrupt) +-> :hold (:hard?)`. 20 tests / 61 assertions
-green (`clojure -M:test`).
+green (`kbb -M:test`).
 
 HARD invariants (always hold, never overridable): office provenance (the
 requesting office must be registered), no-actuation (`:effect` must be
