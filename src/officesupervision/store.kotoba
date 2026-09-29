@@ -1,6 +1,6 @@
 (ns officesupervision.store
   "SSoT for the ISCO-08 3341 independent office supervision practice
-  actor (itonami actor pattern, ADR-2607011000 / CLAUDE.md Actors
+  actor (itonami actor pattern, ADR-2607011000 / AGENTS.md Actors
   section; README's 'Robotics premise' — an office-coordination robot
   performs task-record filing, shift-board updates and supply-closet
   restocking under this advisor/governor pair, which never dispatches
